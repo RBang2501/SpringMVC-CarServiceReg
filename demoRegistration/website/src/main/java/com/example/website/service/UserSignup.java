@@ -3,5 +3,5 @@ import com.example.website.domain.User;
 
 public interface UserSignup {
     public User getUser();
-    public boolean signup(String name, String gender);
+    public Integer signup(String name, String gender);
 }

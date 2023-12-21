@@ -6,9 +6,9 @@ import org.springframework.stereotype.Component;
 import com.example.website.repository.DAO;
 
 @Component
-public class UserStudent implements User{
+public class StudentUser implements User{
     @Autowired
-    DAO<UserStudent> studentDAO; 
+    DAO<StudentUser> studentDAO; 
 
     private String name;
     private String gender;

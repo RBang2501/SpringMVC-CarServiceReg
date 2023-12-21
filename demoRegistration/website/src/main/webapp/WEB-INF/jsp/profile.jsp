@@ -1,0 +1,1 @@
+<h1> Hi this is Profile Page for instructor id ${profileId} </h1>

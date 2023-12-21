@@ -7,17 +7,17 @@ import java.util.Optional;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
-import com.example.website.domain.UserStudent;
+import com.example.website.domain.StudentUser;
 
 
 @Repository
 @Scope("singleton")
-public class StudentDAO implements DAO<UserStudent> {
+public class StudentDAO implements DAO<StudentUser> {
 
-    private List<UserStudent> database = new ArrayList<UserStudent>();
+    private List<StudentUser> database = new ArrayList<StudentUser>();
 
     @Override
-    public Optional<UserStudent> get(Integer id) {
+    public Optional<StudentUser> get(Integer id) {
         if(!database.isEmpty()){
             return Optional.of(database.get(id));
         }
@@ -25,7 +25,7 @@ public class StudentDAO implements DAO<UserStudent> {
     }
 
     @Override
-    public Integer save(UserStudent temp) {
+    public Integer save(StudentUser temp) {
         int userId = database.size();
         temp.setId(userId);
         database.add(temp);

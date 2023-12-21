@@ -12,12 +12,13 @@ public class StudentSignup implements UserSignup {
     User studentUser;
     
     @Override
-    public boolean signup(String name, String gender){
+    public Integer signup(String name, String gender){
         if(studentUser.createUser(name, gender)){
-            studentUser.saveUser();
-            return true;
+            return studentUser.saveUser();
+            // return true;
         }
-        else return false;
+        // else return false;
+        else return -1;
         
     }
 
